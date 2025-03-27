@@ -14,14 +14,14 @@ nome varchar(100),
 email varchar(100)
 );
 
-delimiter
+delimiter //
 
-create procedure inserirCliente(in nome varchar(100),in email varchar(100));
+create procedure inserirCliente(in n varchar(100),in e varchar(100));
 begin
-	insert into cliente (nome,email) values (nome,email);
-end;
+	insert into cliente (nome,email) values (n,e);
+end //
 
-delimiter;
+delimiter ;
 
 call inserirCliente(t,t)
 
